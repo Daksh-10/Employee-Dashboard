@@ -1,5 +1,5 @@
 # Employee Dashboard
-This website provides publically available employee information by fetching it from an API.
+This website provides publically available employee information by fetching it from an API. [Website](https://main--glistening-licorice-b2867b.netlify.app/ )
 
 Steps to reproduce the code
 1. Clone the repository
