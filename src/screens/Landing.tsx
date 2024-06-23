@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-interface Iprops {
+type SETINFO = {
   setInfo: any;
-}
-function Landing({ setInfo }) {
+};
+function Landing(props: SETINFO) {
   const [data, setData] = useState([]);
   const [inputValue, setInputValue] = useState("");
   const navigate = useNavigate();
@@ -26,11 +26,11 @@ function Landing({ setInfo }) {
 
   const navigateToInfo = () => {
     console.log("reached Here");
-    const results = data.filter((value) => {
+    const results = data.filter((value: any) => {
       return value.id === parseInt(inputValue, 10);
     });
     console.log(results);
-    setInfo(results);
+    props.setInfo(results);
     navigate("/info");
   };
   const handleChange = (e: any) => {
@@ -38,16 +38,16 @@ function Landing({ setInfo }) {
   };
 
   const handleDiv = (ID: number) => {
-    const results = data.filter((value) => {
+    const results = data.filter((value: any) => {
       return value.id === ID;
     });
-    setInfo(results);
+    props.setInfo(results);
     navigate("/info");
   };
 
   const handleDelete = (ID: number) => {
     setData(
-      data.filter((value) => {
+      data.filter((value: any) => {
         return value.id !== ID;
       })
     );
@@ -84,7 +84,7 @@ function Landing({ setInfo }) {
       </div>
       <div className="mt-2">
         <ul className="grid grid-cols-4">
-          {data.map((value) => (
+          {data.map((value: any) => (
             <li key={value.id}>
               <div className="max-w-sm rounded overflow-hidden ml-4 mt-4 shadow-lg">
                 <div className="px-6 py-4">
