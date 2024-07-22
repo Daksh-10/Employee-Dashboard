@@ -5,8 +5,6 @@ Steps to reproduce the code
 1. Clone the repository
 2. Install all the dependency
 ```npm install```
-```npm install -D tailwindcss```
-```npm install react-router-dom```
 3. In the terminal run ```npm run dev``` in the base directory.
 4. To view the website open the provided localhost link.
 
